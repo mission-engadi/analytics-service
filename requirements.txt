@@ -29,3 +29,6 @@ python-json-logger==2.0.7
 
 # Utilities
 python-dotenv==1.0.0
+
+# Analytics & Data Science
+numpy==1.26.3  # For advanced analytics calculations

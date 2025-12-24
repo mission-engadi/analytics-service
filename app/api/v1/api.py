@@ -14,7 +14,11 @@ from app.api.v1.endpoints import (
     partner_analytics,
     project_analytics,
     social_media_analytics,
-    notification_analytics
+    notification_analytics,
+    reports,
+    goals,
+    scheduled_jobs,
+    advanced_analytics,
 )
 
 api_router = APIRouter()
@@ -77,4 +81,32 @@ api_router.include_router(
     notification_analytics.router,
     prefix="/analytics/notifications",
     tags=["notification-analytics"],
+)
+
+# Phase 2 endpoints - Reports
+api_router.include_router(
+    reports.router,
+    prefix="/reports",
+    tags=["reports"],
+)
+
+# Phase 2 endpoints - Goals
+api_router.include_router(
+    goals.router,
+    prefix="/goals",
+    tags=["goals"],
+)
+
+# Phase 2 endpoints - Scheduled Jobs
+api_router.include_router(
+    scheduled_jobs.router,
+    prefix="/jobs",
+    tags=["scheduled-jobs"],
+)
+
+# Phase 2 endpoints - Advanced Analytics
+api_router.include_router(
+    advanced_analytics.router,
+    prefix="/advanced",
+    tags=["advanced-analytics"],
 )

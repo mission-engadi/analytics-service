@@ -30,6 +30,45 @@ from app.schemas.data_sync import (
     DataSyncStats,
 )  # noqa: F401
 
+from app.schemas.report import (
+    ReportBase,
+    ReportCreate,
+    ReportUpdate,
+    ReportResponse,
+    ReportScheduleCreate,
+    ReportEmailRequest,
+)  # noqa: F401
+
+from app.schemas.goal import (
+    GoalBase,
+    GoalCreate,
+    GoalUpdate,
+    GoalProgressUpdate,
+    GoalResponse,
+    GoalProgressResponse,
+    GoalForecastResponse,
+)  # noqa: F401
+
+from app.schemas.scheduled_job import (
+    ScheduledJobBase,
+    ScheduledJobCreate,
+    ScheduledJobUpdate,
+    ScheduledJobResponse,
+    ScheduledJobStats,
+    JobTriggerRequest,
+)  # noqa: F401
+
+from app.schemas.advanced_analytics import (
+    PredictionRequest,
+    PredictionResponse,
+    ForecastRequest,
+    ForecastResponse,
+    ComparisonRequest,
+    ComparisonResponse,
+    CustomCalculationRequest,
+    CustomCalculationResponse,
+)  # noqa: F401
+
 __all__ = [
     "ExampleCreate",
     "ExampleUpdate",
@@ -49,4 +88,31 @@ __all__ = [
     "DataSyncUpdate",
     "DataSyncResponse",
     "DataSyncStats",
+    "ReportBase",
+    "ReportCreate",
+    "ReportUpdate",
+    "ReportResponse",
+    "ReportScheduleCreate",
+    "ReportEmailRequest",
+    "GoalBase",
+    "GoalCreate",
+    "GoalUpdate",
+    "GoalProgressUpdate",
+    "GoalResponse",
+    "GoalProgressResponse",
+    "GoalForecastResponse",
+    "ScheduledJobBase",
+    "ScheduledJobCreate",
+    "ScheduledJobUpdate",
+    "ScheduledJobResponse",
+    "ScheduledJobStats",
+    "JobTriggerRequest",
+    "PredictionRequest",
+    "PredictionResponse",
+    "ForecastRequest",
+    "ForecastResponse",
+    "ComparisonRequest",
+    "ComparisonResponse",
+    "CustomCalculationRequest",
+    "CustomCalculationResponse",
 ]

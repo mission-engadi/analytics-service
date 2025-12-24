@@ -33,18 +33,38 @@ Part of the [Mission Engadi](https://engadi.org) microservices architecture.
 
 ## 🎯 Overview
 
-The Analytics Service is a FastAPI-based microservice that handles [describe main functionality]. It's part of the Mission Engadi platform, which aims to [mission statement].
+The Analytics Service is a FastAPI-based microservice that aggregates, analyzes, and reports on data from all Mission Engadi platform services. It provides comprehensive analytics for partners, projects, social media, notifications, and overall platform metrics. The service enables data-driven decision-making through real-time metrics, dashboards, and trend analysis.
+
+**Key Capabilities:**
+- **Metric Aggregation**: Collects and aggregates metrics from 6 microservices
+- **Dashboard Management**: Customizable dashboards for different user roles
+- **Partner Analytics**: Donation tracking, engagement metrics, and partner insights
+- **Project Analytics**: Impact measurement, completion tracking, and beneficiary metrics
+- **Social Media Analytics**: Platform comparison, engagement trends, and performance metrics
+- **Notification Analytics**: Delivery statistics, channel effectiveness, and campaign analysis
+- **Data Synchronization**: Automated sync with source services
 
 ## ✨ Features
 
+### Core Features
+- **35+ API Endpoints**: Comprehensive REST API covering all analytics needs
+- **8 Service Layers**: Modular business logic for metrics, dashboards, and analytics
+- **Multi-Service Integration**: Connects with Partners CRM, Projects, Social Media, and Notification services
+- **Real-Time Metrics**: Live metric collection and aggregation
+- **Time-Series Data**: Historical trend analysis with configurable intervals
+- **Custom Dashboards**: User-defined dashboards with widget support
+- **Executive Reporting**: Pre-configured executive dashboards
+- **Data Sync Management**: Automated and manual sync operations
+
+### Technical Features
 - **RESTful API**: Clean, versioned API with automatic OpenAPI documentation
 - **Async/Await**: Fully asynchronous for high performance
-- **Database**: PostgreSQL with SQLAlchemy ORM and async support
+- **PostgreSQL Database**: Advanced indexing for 3-year data retention
+- **JSONB Storage**: Flexible metadata and dimension storage
 - **Authentication**: JWT-based authentication with role-based access control
 - **Validation**: Request/response validation using Pydantic
-- **Testing**: Comprehensive test suite with pytest
+- **Testing**: 70%+ test coverage with pytest
 - **Docker**: Containerized application with docker-compose
-- **CI/CD**: Automated testing and deployment with GitHub Actions
 - **Monitoring**: Health checks and readiness probes
 - **Logging**: Structured logging with contextual information
 

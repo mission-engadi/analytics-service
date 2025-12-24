@@ -67,8 +67,30 @@ class Settings(BaseSettings):
     KAFKA_BOOTSTRAP_SERVERS: str = "localhost:9092"
     KAFKA_TOPIC_PREFIX: str = "analytics_service"
     
-    # External Services
-    AUTH_SERVICE_URL: str = "http://localhost:8001"
+    # External Services - Microservices Integration
+    AUTH_SERVICE_URL: str = "http://localhost:8002"
+    CONTENT_SERVICE_URL: str = "http://localhost:8003"
+    PARTNERS_CRM_SERVICE_URL: str = "http://localhost:8005"
+    PROJECTS_SERVICE_URL: str = "http://localhost:8006"
+    SOCIAL_MEDIA_SERVICE_URL: str = "http://localhost:8007"
+    NOTIFICATION_SERVICE_URL: str = "http://localhost:8008"
+    
+    # Data Synchronization Settings
+    SYNC_ENABLED: bool = True
+    SYNC_INTERVAL_MINUTES: int = 60  # Default sync every hour
+    SYNC_BATCH_SIZE: int = 1000  # Number of records per batch
+    SYNC_TIMEOUT_SECONDS: int = 300  # 5 minutes timeout
+    SYNC_MAX_RETRIES: int = 3
+    
+    # Cache Settings
+    CACHE_ENABLED: bool = True
+    CACHE_TTL_SECONDS: int = 3600  # 1 hour default TTL
+    CACHE_METRICS_TTL_SECONDS: int = 300  # 5 minutes for metrics
+    CACHE_DASHBOARD_TTL_SECONDS: int = 600  # 10 minutes for dashboards
+    
+    # Analytics Settings
+    ANALYTICS_RETENTION_DAYS: int = 1095  # 3 years
+    ANALYTICS_AGGREGATION_LEVELS: List[str] = ["hourly", "daily", "weekly", "monthly"]
     
     # Logging
     LOG_LEVEL: str = "INFO"
